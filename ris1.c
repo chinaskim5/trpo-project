@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "vis.h"
 
 
 void ris(int step)
