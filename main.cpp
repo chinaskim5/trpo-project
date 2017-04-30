@@ -218,7 +218,7 @@ void ris(int step)
 }
 
 struct slova{
-	char *key;
+	char key[9][20];
 };
 
 int main()
@@ -236,14 +236,14 @@ int main()
 	const int numberStep = 10;
 
 
-	//char letters[] = "человек";
-	char letters[9][20];
+	//char letters[] = "�������";
+	slova letters[20];
 
-	FILE *WORDS = fopen("C:\\words.txt", "r");
+	FILE *WORDS = fopen("words.txt", "r");
 
 	if (WORDS)
 		for (int i = 0; i < SIZE; i++) {
-			fscanf(WORDS, "%s", letters[i]);
+			fscanf(WORDS, "%s", letters[i].key);
 		}
 	else {
 		printf("Error: file doesn't exists!\n");
@@ -258,7 +258,7 @@ int main()
 	do
 	{
 		int random = 0 + rand() % (SIZE + 1);
-		slovo = letters[random];
+		slovo = letters[random].key[0];
 
 		int sizeLetters = strlen(slovo);
 		char outchar[maxLetters];
@@ -321,13 +321,13 @@ int main()
 		} while ((step < numberStep - 1) && (pravilno < strlen(slovo)));
 		if (pravilno == strlen(slovo))
 		{
-			printf("\n\t���������� �� �������� �����\n");
+			printf("\n\t?????????? ?? ???????? ?????\n");
 		}
 		else
 		{
-			printf("\n�� �� �������� �����\n");
+			printf("\n?? ?? ???????? ?????\n");
 		}
-		printf("������� 1, ���� ������ ���������\n");
+		printf("??????? 1, ???? ?????? ?????????\n");
 		inputChar = _getch();
 	} while (inputChar != '1');
 	return 0;
