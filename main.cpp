@@ -214,24 +214,46 @@ void ris(int step)
 			break;
 		}
 	}
-}
+} 
 
-
+struct slova{
+	char *key;
+};
 
 int main()
 {
-	
 	setlocale(LC_CTYPE, "Russian");
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
+
+	time_t currentTime;
+	time(&currentTime);
+
+	srand(currentTime);
 
 	const int maxLetters = 10;
 	const int numberStep = 10;
 
 
-	char letters[] = "человек";
+	//char letters[] = "человек";
+	slova letters[2];
+	letters[0].key = "человек";
+	letters[1].key = "машина";
+	letters[2].key = "телефон";
 	char inputChar = 0;
-	char outchar[] = { '_', '_', '_', '_', '_', '_', '_', '_' };
+
+	int random = 0 + rand() % (2 + 1);
+
+	char *slovo;
+	slovo = letters[random].key;
+
+	int sizeLetters = strlen(slovo);
+	char outchar[maxLetters];
+	for (int i = 0; i < sizeLetters; i++)
+	{
+		outchar[i] = '_';
+	}
+
 
 
 	int pravilno=0;
@@ -247,7 +269,7 @@ int main()
 	do
 	{
 		pravilno = 0;
-		if (errors == strlen(letters))
+		if (errors == strlen(slovo))
 		{
 			step++;
 		}
@@ -255,37 +277,37 @@ int main()
 		ris(step);
 		printf("\n\n\t\t");
 
-		for (int i = 0; i < strlen(letters); i++)
+		for (int i = 0; i < strlen(slovo); i++)
 		{
-			if (inputChar == letters[i])
+			if (inputChar == slovo[i])
 			{
-				outchar[i] = letters[i];
+				outchar[i] = slovo[i];
 			}
 		}
-		for (int i = 0; i < strlen(letters); i++)
+		for (int i = 0; i < strlen(slovo); i++)
 		{
-			if (outchar[i] == letters[i])
+			if (outchar[i] == slovo[i])
 			{
 				pravilno++;
 			}
 		}
 		
-		for (int i = 0; i < strlen(letters); i++)
+		for (int i = 0; i < strlen(slovo); i++)
 		{
 			printf("%c ", outchar[i]);
 		}
 		inputChar=_getch();
 		errors = 0;
-		for (int i = 0; i < strlen(letters); i++)
+		for (int i = 0; i < strlen(slovo); i++)
 		{
-			if (inputChar != letters[i])
+			if (inputChar != slovo[i])
 			{
 				errors++;
 			}
 		}
 	} 
-	while ((step < numberStep-1) && (pravilno < strlen(letters)));
-	if (pravilno == 7)
+	while ((step < numberStep - 1) && (pravilno < strlen(slovo)));
+	if (pravilno == strlen(slovo))
 	{
 		printf("\n\tПоздравляю вы отгадали слово\n");
 	}
