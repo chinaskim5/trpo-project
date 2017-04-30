@@ -242,78 +242,83 @@ int main()
 	letters[2].key = "телефон";
 	char inputChar = 0;
 
-	int random = 0 + rand() % (2 + 1);
+	
 
 	char *slovo;
-	slovo = letters[random].key;
-
-	int sizeLetters = strlen(slovo);
-	char outchar[maxLetters];
-	for (int i = 0; i < sizeLetters; i++)
-	{
-		outchar[i] = '_';
-	}
-
-
-
-	int pravilno=0;
-	int step = 0;
-	int errors = 1;
-	int number = 0;
-//	ris(step);
-	//printf("\n\n\t\t");
-	//for (int i = 0; i < strlen(letters); i++)
-	//{
-	//	printf("_ ");
-	//}
 	do
 	{
-		pravilno = 0;
-		if (errors == strlen(slovo))
-		{
-			step++;
-		}
-		system("cls");
-		ris(step);
-		printf("\n\n\t\t");
+		int random = 0 + rand() % (2 + 1);
+		slovo = letters[random].key;
 
-		for (int i = 0; i < strlen(slovo); i++)
+		int sizeLetters = strlen(slovo);
+		char outchar[maxLetters];
+		for (int i = 0; i < sizeLetters; i++)
 		{
-			if (inputChar == slovo[i])
+			outchar[i] = '_';
+		}
+
+
+
+		int pravilno = 0;
+		int step = 0;
+		int errors = 1;
+		int number = 0;
+		//	ris(step);
+		//printf("\n\n\t\t");
+		//for (int i = 0; i < strlen(letters); i++)
+		//{
+		//	printf("_ ");
+		//}
+		do
+		{
+			pravilno = 0;
+			if (errors == strlen(slovo))
 			{
-				outchar[i] = slovo[i];
+				step++;
 			}
-		}
-		for (int i = 0; i < strlen(slovo); i++)
-		{
-			if (outchar[i] == slovo[i])
+			system("cls");
+			ris(step);
+			printf("\n\n\t\t");
+
+			for (int i = 0; i < strlen(slovo); i++)
 			{
-				pravilno++;
+				if (inputChar == slovo[i])
+				{
+					outchar[i] = slovo[i];
+				}
 			}
-		}
-		
-		for (int i = 0; i < strlen(slovo); i++)
-		{
-			printf("%c ", outchar[i]);
-		}
-		inputChar=_getch();
-		errors = 0;
-		for (int i = 0; i < strlen(slovo); i++)
-		{
-			if (inputChar != slovo[i])
+			for (int i = 0; i < strlen(slovo); i++)
 			{
-				errors++;
+				if (outchar[i] == slovo[i])
+				{
+					pravilno++;
+				}
 			}
+
+			for (int i = 0; i < strlen(slovo); i++)
+			{
+				printf("%c ", outchar[i]);
+			}
+			inputChar = _getch();
+			errors = 0;
+			for (int i = 0; i < strlen(slovo); i++)
+			{
+				if (inputChar != slovo[i])
+				{
+					errors++;
+				}
+			}
+		} while ((step < numberStep - 1) && (pravilno < strlen(slovo)));
+		if (pravilno == strlen(slovo))
+		{
+			printf("\n\tПоздравляю вы отгадали слово\n");
 		}
-	} 
-	while ((step < numberStep - 1) && (pravilno < strlen(slovo)));
-	if (pravilno == strlen(slovo))
-	{
-		printf("\n\tПоздравляю вы отгадали слово\n");
-	}
-	else
-	{
-		printf("\nВы не отгадали слово\n");
-	}
+		else
+		{
+			printf("\nВы не отгадали слово\n");
+		}
+		printf("Введите 1, если хотите закончить\n");
+		inputChar = _getch();
+	} while (inputChar != '1');
 	return 0;
 }
