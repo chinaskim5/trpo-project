@@ -15,210 +15,210 @@ void ris(int step)
 	{
 	case 0:
 	{
-		printf("\n\t**********************");
-		printf("\n\t                      ");
-		printf("\n\t                      ");
-		printf("\n\t                      ");
-		printf("\n\t                      ");
-		printf("\n\t                      ");
-		printf("\n\t                      ");
-		printf("\n\t                      ");
-		printf("\n\t                      ");
-		printf("\n\t                      ");
-		printf("\n\t                      ");
-		printf("\n\t                      ");
-		printf("\n\t                      ");
-		printf("\n\t                      ");
-		printf("\n\t                      ");
-		printf("\n\t**********************");
-		break;
+			  printf("\n\t**********************");
+			  printf("\n\t                      ");
+			  printf("\n\t                      ");
+			  printf("\n\t                      ");
+			  printf("\n\t                      ");
+			  printf("\n\t                      ");
+			  printf("\n\t                      ");
+			  printf("\n\t                      ");
+			  printf("\n\t                      ");
+			  printf("\n\t                      ");
+			  printf("\n\t                      ");
+			  printf("\n\t                      ");
+			  printf("\n\t                      ");
+			  printf("\n\t                      ");
+			  printf("\n\t                      ");
+			  printf("\n\t**********************");
+			  break;
 	}
 	case 1:
 	{
 
-		printf("\n\t**********************");
-		printf("\n\t                      ");
-		printf("\n\t                      ");
-		printf("\n\t                      ");
-		printf("\n\t                      ");
-		printf("\n\t                      ");
-		printf("\n\t                      ");
-		printf("\n\t                      ");
-		printf("\n\t                      ");
-		printf("\n\t                      ");
-		printf("\n\t                      ");
-		printf("\n\t                      ");
-		printf("\n\t  -----------------   ");
-		printf("\n\t  |               |   ");
-		printf("\n\t                      ");
-		printf("\n\t**********************");
-		break;
+			  printf("\n\t**********************");
+			  printf("\n\t                      ");
+			  printf("\n\t                      ");
+			  printf("\n\t                      ");
+			  printf("\n\t                      ");
+			  printf("\n\t                      ");
+			  printf("\n\t                      ");
+			  printf("\n\t                      ");
+			  printf("\n\t                      ");
+			  printf("\n\t                      ");
+			  printf("\n\t                      ");
+			  printf("\n\t                      ");
+			  printf("\n\t  -----------------   ");
+			  printf("\n\t  |               |   ");
+			  printf("\n\t                      ");
+			  printf("\n\t**********************");
+			  break;
 	}
 	case 2:
 	{
-		printf("\n\t**********************");
-		printf("\n\t                      ");
-		printf("\n\t                      ");
-		printf("\n\t  |                   ");
-		printf("\n\t  |                   ");
-		printf("\n\t  |                   ");
-		printf("\n\t  |                   ");
-		printf("\n\t  |                   ");
-		printf("\n\t  |                   ");
-		printf("\n\t  |                   ");
-		printf("\n\t  |                   ");
-		printf("\n\t  |                   ");
-		printf("\n\t  -----------------   ");
-		printf("\n\t  |               |   ");
-		printf("\n\t                      ");
-		printf("\n\t**********************");
-		break;
+			  printf("\n\t**********************");
+			  printf("\n\t                      ");
+			  printf("\n\t                      ");
+			  printf("\n\t  |                   ");
+			  printf("\n\t  |                   ");
+			  printf("\n\t  |                   ");
+			  printf("\n\t  |                   ");
+			  printf("\n\t  |                   ");
+			  printf("\n\t  |                   ");
+			  printf("\n\t  |                   ");
+			  printf("\n\t  |                   ");
+			  printf("\n\t  |                   ");
+			  printf("\n\t  -----------------   ");
+			  printf("\n\t  |               |   ");
+			  printf("\n\t                      ");
+			  printf("\n\t**********************");
+			  break;
 	}
 	case 3:
 	{
-		printf("\n\t**********************");
-		printf("\n\t                      ");
-		printf("\n\t  -----------         ");
-		printf("\n\t  |                   ");
-		printf("\n\t  |                   ");
-		printf("\n\t  |                   ");
-		printf("\n\t  |                   ");
-		printf("\n\t  |                   ");
-		printf("\n\t  |                   ");
-		printf("\n\t  |                   ");
-		printf("\n\t  |                   ");
-		printf("\n\t  |                   ");
-		printf("\n\t  -----------------   ");
-		printf("\n\t  |               |   ");
-		printf("\n\t                      ");
-		printf("\n\t**********************");
-		break;
+			  printf("\n\t**********************");
+			  printf("\n\t                      ");
+			  printf("\n\t  -----------         ");
+			  printf("\n\t  |                   ");
+			  printf("\n\t  |                   ");
+			  printf("\n\t  |                   ");
+			  printf("\n\t  |                   ");
+			  printf("\n\t  |                   ");
+			  printf("\n\t  |                   ");
+			  printf("\n\t  |                   ");
+			  printf("\n\t  |                   ");
+			  printf("\n\t  |                   ");
+			  printf("\n\t  -----------------   ");
+			  printf("\n\t  |               |   ");
+			  printf("\n\t                      ");
+			  printf("\n\t**********************");
+			  break;
 	}
 	case 4:
 	{
-		printf("\n\t**********************");
-		printf("\n\t                      ");
-		printf("\n\t  -----------         ");
-		printf("\n\t  |         |         ");
-		printf("\n\t  |         |         ");
-		printf("\n\t  |         -         ");
-		printf("\n\t  |                   ");
-		printf("\n\t  |                   ");
-		printf("\n\t  |                   ");
-		printf("\n\t  |                   ");
-		printf("\n\t  |       _____       ");
-		printf("\n\t  |       |   |       ");
-		printf("\n\t  -----------------   ");
-		printf("\n\t  |               |   ");
-		printf("\n\t                      ");
-		printf("\n\t**********************");
-		break;
+			  printf("\n\t**********************");
+			  printf("\n\t                      ");
+			  printf("\n\t  -----------         ");
+			  printf("\n\t  |         |         ");
+			  printf("\n\t  |         |         ");
+			  printf("\n\t  |         -         ");
+			  printf("\n\t  |                   ");
+			  printf("\n\t  |                   ");
+			  printf("\n\t  |                   ");
+			  printf("\n\t  |                   ");
+			  printf("\n\t  |       _____       ");
+			  printf("\n\t  |       |   |       ");
+			  printf("\n\t  -----------------   ");
+			  printf("\n\t  |               |   ");
+			  printf("\n\t                      ");
+			  printf("\n\t**********************");
+			  break;
 	}
 	case 5:
 	{
-		printf("\n\t**********************");
-		printf("\n\t                      ");
-		printf("\n\t  -----------         ");
-		printf("\n\t  |         |         ");
-		printf("\n\t  |         |         ");
-		printf("\n\t  |         -         ");
-		printf("\n\t  |        (o)        ");
-		printf("\n\t  |                   ");
-		printf("\n\t  |                   ");
-		printf("\n\t  |                   ");
-		printf("\n\t  |       _____       ");
-		printf("\n\t  |       |   |       ");
-		printf("\n\t  -----------------   ");
-		printf("\n\t  |               |   ");
-		printf("\n\t                      ");
-		printf("\n\t**********************");
-		break;
+			  printf("\n\t**********************");
+			  printf("\n\t                      ");
+			  printf("\n\t  -----------         ");
+			  printf("\n\t  |         |         ");
+			  printf("\n\t  |         |         ");
+			  printf("\n\t  |         -         ");
+			  printf("\n\t  |        (o)        ");
+			  printf("\n\t  |                   ");
+			  printf("\n\t  |                   ");
+			  printf("\n\t  |                   ");
+			  printf("\n\t  |       _____       ");
+			  printf("\n\t  |       |   |       ");
+			  printf("\n\t  -----------------   ");
+			  printf("\n\t  |               |   ");
+			  printf("\n\t                      ");
+			  printf("\n\t**********************");
+			  break;
 	}
 	case 6:
 	{
-		printf("\n\t**********************");
-		printf("\n\t                      ");
-		printf("\n\t  -----------         ");
-		printf("\n\t  |         |         ");
-		printf("\n\t  |         |         ");
-		printf("\n\t  |         -         ");
-		printf("\n\t  |        (o)        ");
-		printf("\n\t  |         0         ");
-		printf("\n\t  |                   ");
-		printf("\n\t  |                   ");
-		printf("\n\t  |       _____       ");
-		printf("\n\t  |       |   |       ");
-		printf("\n\t  -----------------   ");
-		printf("\n\t  |               |   ");
-		printf("\n\t                      ");
-		printf("\n\t**********************");
-		break;
+			  printf("\n\t**********************");
+			  printf("\n\t                      ");
+			  printf("\n\t  -----------         ");
+			  printf("\n\t  |         |         ");
+			  printf("\n\t  |         |         ");
+			  printf("\n\t  |         -         ");
+			  printf("\n\t  |        (o)        ");
+			  printf("\n\t  |         0         ");
+			  printf("\n\t  |                   ");
+			  printf("\n\t  |                   ");
+			  printf("\n\t  |       _____       ");
+			  printf("\n\t  |       |   |       ");
+			  printf("\n\t  -----------------   ");
+			  printf("\n\t  |               |   ");
+			  printf("\n\t                      ");
+			  printf("\n\t**********************");
+			  break;
 	}
 	case 7:
 	{
-		printf("\n\t**********************");
-		printf("\n\t                      ");
-		printf("\n\t  -----------         ");
-		printf("\n\t  |         |         ");
-		printf("\n\t  |         |         ");
-		printf("\n\t  |         -         ");
-		printf("\n\t  |        (o)        ");
-		printf("\n\t  |        /0\\       ");
-		printf("\n\t  |                   ");
-		printf("\n\t  |                   ");
-		printf("\n\t  |       _____       ");
-		printf("\n\t  |       |   |       ");
-		printf("\n\t  -----------------   ");
-		printf("\n\t  |               |   ");
-		printf("\n\t                      ");
-		printf("\n\t**********************");
-		break;
+			  printf("\n\t**********************");
+			  printf("\n\t                      ");
+			  printf("\n\t  -----------         ");
+			  printf("\n\t  |         |         ");
+			  printf("\n\t  |         |         ");
+			  printf("\n\t  |         -         ");
+			  printf("\n\t  |        (o)        ");
+			  printf("\n\t  |        /0\\       ");
+			  printf("\n\t  |                   ");
+			  printf("\n\t  |                   ");
+			  printf("\n\t  |       _____       ");
+			  printf("\n\t  |       |   |       ");
+			  printf("\n\t  -----------------   ");
+			  printf("\n\t  |               |   ");
+			  printf("\n\t                      ");
+			  printf("\n\t**********************");
+			  break;
 	}
 	case 8:
 	{
-		printf("\n\t**********************");
-		printf("\n\t                      ");
-		printf("\n\t  -----------         ");
-		printf("\n\t  |         |         ");
-		printf("\n\t  |         |         ");
-		printf("\n\t  |         -         ");
-		printf("\n\t  |        (o)        ");
-		printf("\n\t  |        /0\\       ");
-		printf("\n\t  |        / \\       ");
-		printf("\n\t  |                   ");
-		printf("\n\t  |       _____       ");
-		printf("\n\t  |       |   |       ");
-		printf("\n\t  -----------------   ");
-		printf("\n\t  |               |   ");
-		printf("\n\t                      ");
-		printf("\n\t**********************");
-		break;
+			  printf("\n\t**********************");
+			  printf("\n\t                      ");
+			  printf("\n\t  -----------         ");
+			  printf("\n\t  |         |         ");
+			  printf("\n\t  |         |         ");
+			  printf("\n\t  |         -         ");
+			  printf("\n\t  |        (o)        ");
+			  printf("\n\t  |        /0\\       ");
+			  printf("\n\t  |        / \\       ");
+			  printf("\n\t  |                   ");
+			  printf("\n\t  |       _____       ");
+			  printf("\n\t  |       |   |       ");
+			  printf("\n\t  -----------------   ");
+			  printf("\n\t  |               |   ");
+			  printf("\n\t                      ");
+			  printf("\n\t**********************");
+			  break;
 	}
 	case 9:
 	{
-		printf("\n\t**********************");
-		printf("\n\t                      ");
-		printf("\n\t  -----------         ");
-		printf("\n\t  |         |         ");
-		printf("\n\t  |         |         ");
-		printf("\n\t  |         -         ");
-		printf("\n\t  |        (X)        ");
-		printf("\n\t  |        /0\\       ");
-		printf("\n\t  |        / \\       ");
-		printf("\n\t  |                   ");
-		printf("\n\t  |       _____       ");
-		printf("\n\t  |       |   |       ");
-		printf("\n\t  -----------------   ");
-		printf("\n\t  |               |   ");
-		printf("\n\t                      ");
-		printf("\n\t**********************");
-		break;
+			  printf("\n\t**********************");
+			  printf("\n\t                      ");
+			  printf("\n\t  -----------         ");
+			  printf("\n\t  |         |         ");
+			  printf("\n\t  |         |         ");
+			  printf("\n\t  |         -         ");
+			  printf("\n\t  |        (X)        ");
+			  printf("\n\t  |        /0\\       ");
+			  printf("\n\t  |        / \\       ");
+			  printf("\n\t  |                   ");
+			  printf("\n\t  |       _____       ");
+			  printf("\n\t  |       |   |       ");
+			  printf("\n\t  -----------------   ");
+			  printf("\n\t  |               |   ");
+			  printf("\n\t                      ");
+			  printf("\n\t**********************");
+			  break;
 	}
 	}
 }
 
 struct slova{
-	char *key;
+	char key[9][20];
 };
 
 int main()
@@ -236,15 +236,15 @@ int main()
 	const int numberStep = 10;
 
 
-	//char letters[] = "С‡РµР»РѕРІРµРє";
-	char letters[9][20];
+	//char letters[] = "человек";
+	slova letters[20];
 
-	FILE *WORDS = fopen("C:\\words.txt", "r");
+	FILE *WORDS = fopen("words.txt", "r");
 
 	if (WORDS)
-		for (int i = 0; i < SIZE; i++) {
-			fscanf(WORDS, "%s", letters[i]);
-		}
+	for (int i = 0; i < SIZE; i++) {
+		fscanf(WORDS, "%s", letters[i].key);
+	}
 	else {
 		printf("Error: file doesn't exists!\n");
 		return -1;
@@ -258,7 +258,7 @@ int main()
 	do
 	{
 		int random = 0 + rand() % (SIZE + 1);
-		slovo = letters[random];
+		slovo = letters[random].key[0];
 
 		int sizeLetters = strlen(slovo);
 		char outchar[maxLetters];
@@ -321,13 +321,13 @@ int main()
 		} while ((step < numberStep - 1) && (pravilno < strlen(slovo)));
 		if (pravilno == strlen(slovo))
 		{
-			printf("\n\tпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ\n");
+			printf("\n\t?????????? ?? ???????? ?????\n");
 		}
 		else
 		{
-			printf("\nпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ\n");
+			printf("\n?? ?? ???????? ?????\n");
 		}
-		printf("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ 1, пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ\n");
+		printf("??????? 1, ???? ?????? ?????????\n");
 		inputChar = _getch();
 	} while (inputChar != '1');
 	return 0;
