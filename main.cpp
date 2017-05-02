@@ -232,11 +232,11 @@ int main()
 
 	srand(currentTime);
 
-	const int maxLetters = 10;
+	const int maxLetters = 20;
 	const int numberStep = 10;
 
 
-	//char letters[] = "человек";
+	//char letters[] = "???????";
 	slova letters[20];
 
 	FILE *WORDS = fopen("words.txt", "r");
@@ -262,6 +262,9 @@ int main()
 
 		int sizeLetters = strlen(slovo);
 		char outchar[maxLetters];
+		char inputletters[maxLetters]; // Введеные буквы
+		memset(inputletters, NULL, maxLetters);
+		
 		for (int i = 0; i < sizeLetters; i++)
 		{
 			outchar[i] = '_';
@@ -273,6 +276,7 @@ int main()
 		int step = 0;
 		int errors = 1;
 		int number = 0;
+		int counter = 0;
 		//	ris(step);
 		//printf("\n\n\t\t");
 		//for (int i = 0; i < strlen(letters); i++)
@@ -309,7 +313,26 @@ int main()
 			{
 				printf("%c ", outchar[i]);
 			}
+			
+			printf("\nВы ввели :");
+			
+			for (int i = 0; i < 20; i++)
+			{
+				if (inputletters[i] != inputletters[i - 1])   // Выводит те буквы , которые уже были введены.
+				{
+					printf(" %c", inputletters[i]);
+				}
+			}
+			
 			inputChar = _getch();
+			
+			inputletters[counter] = inputChar;
+			if (inputletters[counter] != inputletters[counter - 1])
+			{
+				counter++;    // счетчик для введенных буквы
+			}
+			
+			
 			errors = 0;
 			for (int i = 0; i < strlen(slovo); i++)
 			{
