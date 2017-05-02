@@ -253,15 +253,16 @@ int main()
 	}
 
 	FILE *TIPS = fopen("tips.txt", "r");
+
+
 	if (TIPS)
 		for (int i = 0; i < SIZE; i++){
 			fscanf(TIPS, "%s", letters[i].podz);
 		}
-	else {
-		printf("Error: file doesn't exists\n");
-		return -1;
-	}
+	
 
+
+	
 	char inputChar = 0;
 
 
@@ -271,7 +272,6 @@ int main()
 	{
 		int random = 0 + rand() % (SIZE + 1);
 		slovo = letters[random].key[0];
-		slovo = letters[random].podz[0];
 
 		int sizeLetters = strlen(slovo);
 		char outchar[maxLetters];
