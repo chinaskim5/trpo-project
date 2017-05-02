@@ -236,33 +236,15 @@ int main()
 	const int numberStep = 10;
 
 
-<<<<<<< HEAD
-	//char letters[] = "???????";
+	//char letters[] = "???";
 	slova letters[20];
-||||||| merged common ancestors
-	//char letters[] = "С‡РµР»РѕРІРµРє";
-	char letters[9][20];
-=======
-	//char letters[] = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ";
-	slova letters[20];
->>>>>>> 40bbc15eaecff9f381573d023323fdfde21f5771
 
 	FILE *WORDS = fopen("words.txt", "r");
 
 	if (WORDS)
-<<<<<<< HEAD
 	for (int i = 0; i < SIZE; i++) {
 		fscanf(WORDS, "%s", letters[i].key);
 	}
-||||||| merged common ancestors
-		for (int i = 0; i < SIZE; i++) {
-			fscanf(WORDS, "%s", letters[i]);
-		}
-=======
-		for (int i = 0; i < SIZE; i++) {
-			fscanf(WORDS, "%s", letters[i].key);
-		}
->>>>>>> 40bbc15eaecff9f381573d023323fdfde21f5771
 	else {
 		printf("Error: file doesn't exists!\n");
 		return -1;
@@ -282,7 +264,7 @@ int main()
 		char outchar[maxLetters];
 		char inputletters[maxLetters]; // Введеные буквы
 		memset(inputletters, NULL, maxLetters);
-		
+
 		for (int i = 0; i < sizeLetters; i++)
 		{
 			outchar[i] = '_';
@@ -331,9 +313,9 @@ int main()
 			{
 				printf("%c ", outchar[i]);
 			}
-			
+
 			printf("\nВы ввели :");
-			
+
 			for (int i = 0; i < 20; i++)
 			{
 				if (inputletters[i] != inputletters[i - 1])   // Выводит те буквы , которые уже были введены.
@@ -341,16 +323,16 @@ int main()
 					printf(" %c", inputletters[i]);
 				}
 			}
-			
+
 			inputChar = _getch();
-			
+
 			inputletters[counter] = inputChar;
 			if (inputletters[counter] != inputletters[counter - 1])
 			{
 				counter++;    // счетчик для введенных буквы
 			}
-			
-			
+
+
 			errors = 0;
 			for (int i = 0; i < strlen(slovo); i++)
 			{
@@ -362,31 +344,13 @@ int main()
 		} while ((step < numberStep - 1) && (pravilno < strlen(slovo)));
 		if (pravilno == strlen(slovo))
 		{
-<<<<<<< HEAD
 			printf("\n\t?????????? ?? ???????? ?????\n");
-||||||| merged common ancestors
-			printf("\n\tпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ\n");
-=======
-			printf("\n\tРџРѕР·РґСЂР°РІР»СЏСЋ, РІС‹ РІС‹РёРіСЂР°Р»Рё!\n");
->>>>>>> 40bbc15eaecff9f381573d023323fdfde21f5771
 		}
 		else
 		{
-<<<<<<< HEAD
 			printf("\n?? ?? ???????? ?????\n");
-||||||| merged common ancestors
-			printf("\nпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ\n");
-=======
-			printf("\nР’С‹ РїСЂРѕРёРіСЂР°Р»Рё\n");
->>>>>>> 40bbc15eaecff9f381573d023323fdfde21f5771
 		}
-<<<<<<< HEAD
 		printf("??????? 1, ???? ?????? ?????????\n");
-||||||| merged common ancestors
-		printf("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ 1, пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ\n");
-=======
-		printf("РќР°Р¶РјРёС‚Рµ 1, С‡С‚РѕР±С‹ Р·Р°РєРѕРЅС‡РёС‚СЊ РёРіСЂСѓ\n");
->>>>>>> 40bbc15eaecff9f381573d023323fdfde21f5771
 		inputChar = _getch();
 	} while (inputChar != '1');
 	return 0;
