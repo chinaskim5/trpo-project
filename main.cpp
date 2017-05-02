@@ -219,6 +219,7 @@ void ris(int step)
 
 struct slova{
 	char key[9][20];
+	char podz[50][50];
 };
 
 int main()
@@ -226,7 +227,7 @@ int main()
 	setlocale(LC_CTYPE, "Russian");
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
-
+	
 	time_t currentTime;
 	time(&currentTime);
 
@@ -240,6 +241,7 @@ int main()
 	slova letters[20];
 
 	FILE *WORDS = fopen("words.txt", "r");
+	
 
 	if (WORDS)
 	for (int i = 0; i < SIZE; i++) {
@@ -247,6 +249,16 @@ int main()
 	}
 	else {
 		printf("Error: file doesn't exists!\n");
+		return -1;
+	}
+
+	FILE *TIPS = fopen("tips.txt", "r");
+	if (TIPS)
+		for (int i = 0; i < SIZE; i++){
+			fscanf(TIPS, "%s", letters[i].podz);
+		}
+	else {
+		printf("Error: file doesn't exists\n");
 		return -1;
 	}
 
@@ -259,6 +271,7 @@ int main()
 	{
 		int random = 0 + rand() % (SIZE + 1);
 		slovo = letters[random].key[0];
+		slovo = letters[random].podz[0];
 
 		int sizeLetters = strlen(slovo);
 		char outchar[maxLetters];
