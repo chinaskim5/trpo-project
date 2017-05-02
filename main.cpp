@@ -236,15 +236,33 @@ int main()
 	const int numberStep = 10;
 
 
+<<<<<<< HEAD
 	//char letters[] = "???????";
 	slova letters[20];
+||||||| merged common ancestors
+	//char letters[] = "человек";
+	char letters[9][20];
+=======
+	//char letters[] = "�������";
+	slova letters[20];
+>>>>>>> 40bbc15eaecff9f381573d023323fdfde21f5771
 
 	FILE *WORDS = fopen("words.txt", "r");
 
 	if (WORDS)
+<<<<<<< HEAD
 	for (int i = 0; i < SIZE; i++) {
 		fscanf(WORDS, "%s", letters[i].key);
 	}
+||||||| merged common ancestors
+		for (int i = 0; i < SIZE; i++) {
+			fscanf(WORDS, "%s", letters[i]);
+		}
+=======
+		for (int i = 0; i < SIZE; i++) {
+			fscanf(WORDS, "%s", letters[i].key);
+		}
+>>>>>>> 40bbc15eaecff9f381573d023323fdfde21f5771
 	else {
 		printf("Error: file doesn't exists!\n");
 		return -1;
@@ -344,13 +362,31 @@ int main()
 		} while ((step < numberStep - 1) && (pravilno < strlen(slovo)));
 		if (pravilno == strlen(slovo))
 		{
+<<<<<<< HEAD
 			printf("\n\t?????????? ?? ???????? ?????\n");
+||||||| merged common ancestors
+			printf("\n\t���������� �� �������� �����\n");
+=======
+			printf("\n\tПоздравляю, вы выиграли!\n");
+>>>>>>> 40bbc15eaecff9f381573d023323fdfde21f5771
 		}
 		else
 		{
+<<<<<<< HEAD
 			printf("\n?? ?? ???????? ?????\n");
+||||||| merged common ancestors
+			printf("\n�� �� �������� �����\n");
+=======
+			printf("\nВы проиграли\n");
+>>>>>>> 40bbc15eaecff9f381573d023323fdfde21f5771
 		}
+<<<<<<< HEAD
 		printf("??????? 1, ???? ?????? ?????????\n");
+||||||| merged common ancestors
+		printf("������� 1, ���� ������ ���������\n");
+=======
+		printf("Нажмите 1, чтобы закончить игру\n");
+>>>>>>> 40bbc15eaecff9f381573d023323fdfde21f5771
 		inputChar = _getch();
 	} while (inputChar != '1');
 	return 0;
