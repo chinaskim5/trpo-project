@@ -7,7 +7,11 @@
 #include <ctype.h>
 #include <iostream>
 #include <cstdio>
+#include <fstream>
+#include <string>
 #define SIZE 10
+
+using namespace std;
 
 void ris(int step)
 {
@@ -219,14 +223,17 @@ void ris(int step)
 
 struct slova{
 	char key[9][20];
+	string podz;
 };
+
+
 
 int main()
 {
 	setlocale(LC_CTYPE, "Russian");
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
-
+	
 	time_t currentTime;
 	time(&currentTime);
 
@@ -240,6 +247,7 @@ int main()
 	slova letters[20];
 
 	FILE *WORDS = fopen("words.txt", "r");
+	
 
 	if (WORDS)
 	for (int i = 0; i < SIZE; i++) {
@@ -250,6 +258,12 @@ int main()
 		return -1;
 	}
 
+	ifstream myfile("tips.txt");
+	for (int i = 0; i < SIZE; i++){
+		getline(myfile, letters[i].podz);
+	}
+
+	
 	char inputChar = 0;
 
 
