@@ -226,6 +226,71 @@ struct slova{
 	string podz;
 };
 
+int randomGenerator(int digit) // Returns a random number
+{
+	digit = 0 + rand() % (SIZE + 1);
+	return digit;
+}
+
+int errorsInLetters(char *slovo, char inputChar) // Checks whether the letter entered is part of a word
+{
+	int nesovpal = 0;
+	for (int i = 0; i < strlen(slovo); i++)
+	{
+		if (inputChar != slovo[i] && inputChar != '7') // on 7 the prompt is called
+		{
+			nesovpal++;
+		}
+	}
+	return nesovpal;
+}
+int checkErros(int errors, char *slovo, int step)  // Check how many mismatches
+{
+	if (errors == strlen(slovo))
+	{
+		step++;
+	}
+	return step;
+}
+
+int correctLetters(char *slovo, char inputChar, char outchar[], int *pravilno) // Checks which entered characters match the word
+{
+	for (int i = 0; i < strlen(slovo); i++)
+	{
+		if (inputChar == slovo[i])
+		{
+			outchar[i] = slovo[i];
+		}
+	}
+	for (int i = 0; i < strlen(slovo); i++)           // We count how many letters are correct
+	{
+		if (outchar[i] == slovo[i])
+		{
+			*pravilno = *pravilno + 1;
+		}
+	}
+	return 0;
+}
+
+void printLetters(char *slovo, char outchar[]) // Displays the correct words on the screen
+{
+	for (int i = 0; i < strlen(slovo); i++)
+	{
+		printf("%c ", outchar[i]);
+	}
+	printf("\n");
+}
+
+int Tips(char inputChar, int quantityPodzOnLetters, int podzkazki, int flag) // Flag for tooltip
+{
+	if (inputChar == '7' && quantityPodzOnLetters == 1 && podzkazki > 0)
+	{
+		flag = 1;
+	}
+	return flag;
+
+}
+
 
 
 int main()
@@ -233,7 +298,7 @@ int main()
 	setlocale(LC_CTYPE, "Russian");
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
-	
+
 	time_t currentTime;
 	time(&currentTime);
 
@@ -244,10 +309,10 @@ int main()
 
 
 	//char letters[] = "???";
-	slova letters[20];
+	slova letters[SIZE];
 
 	FILE *WORDS = fopen("words.txt", "r");
-	
+
 
 	if (WORDS)
 	for (int i = 0; i < SIZE; i++) {
@@ -263,76 +328,80 @@ int main()
 		getline(myfile, letters[i].podz);
 	}
 
-	
+
 	char inputChar = 0;
 
 
 
 	char *slovo;
+	string podz;
+
+	int random = 0; // Random number from 0 to size
+
+	int podzkazki = 3;
 	do
 	{
-		int random = 0 + rand() % (SIZE + 1);
+		random = randomGenerator(random); // Random number for structure
 		slovo = letters[random].key[0];
+		podz = letters[random].podz;
 
-		int sizeLetters = strlen(slovo);
-		char outchar[maxLetters];
-		char inputletters[maxLetters]; // Введеные буквы
-		memset(inputletters, NULL, maxLetters);
+		int sizeLetters = strlen(slovo); // How many letters in a word
+		char outchar[maxLetters];  // The data to be displayed on the screen
+		char inputletters[maxLetters]; // For input characters
+		memset(inputletters, NULL, maxLetters); // Clean the array
 
-		for (int i = 0; i < sizeLetters; i++)
+		for (int i = 0; i < sizeLetters; i++) // We put all the letters not guessing
 		{
 			outchar[i] = '_';
 		}
 
 
-
+		//Game settings
 		int pravilno = 0;
 		int step = 0;
 		int errors = 1;
 		int number = 0;
 		int counter = 0;
-		//	ris(step);
-		//printf("\n\n\t\t");
-		//for (int i = 0; i < strlen(letters); i++)
-		//{
-		//	printf("_ ");
-		//}
+		int quantityPodzOnLetters = 1;
+
 		do
 		{
+			int flag = 0;
+
+			errors = errorsInLetters(slovo, inputChar);
 			pravilno = 0;
-			if (errors == strlen(slovo))
-			{
-				step++;
-			}
+			step = checkErros(errors, slovo, step);
+
 			system("cls");
 			ris(step);
 			printf("\n\n\t\t");
 
-			for (int i = 0; i < strlen(slovo); i++)
-			{
-				if (inputChar == slovo[i])
-				{
-					outchar[i] = slovo[i];
-				}
-			}
-			for (int i = 0; i < strlen(slovo); i++)
-			{
-				if (outchar[i] == slovo[i])
-				{
-					pravilno++;
-				}
-			}
+			correctLetters(slovo, inputChar, outchar, &pravilno);
 
-			for (int i = 0; i < strlen(slovo); i++)
+			printLetters(slovo, outchar);
+			flag = Tips(inputChar, quantityPodzOnLetters, podzkazki, flag);
+			if (flag == 1)
 			{
-				printf("%c ", outchar[i]);
+				printf("\n\t");
+				cout << podz << endl;
+				quantityPodzOnLetters--;
+				podzkazki--;
 			}
-
-			printf("\nВы ввели :");
-
+			if (quantityPodzOnLetters == 0 && podzkazki > 0)
+			{
+				printf("\n\tBolshe nety podzkazok dla etogo slova");
+			}
+			if (quantityPodzOnLetters == 0 && podzkazki > 0)
+			{
+				printf("\n\t K etomy slovy bolshe net podzkazok");
+			}
+			printf("\n\t Y vas ostalos %d podzkazki", podzkazki);
+			printf("\n\t Chto bi podsmotret naberite <?>");
+			printf("\n\t");
+			printf("Vvedenii bykvi:");
 			for (int i = 0; i < 20; i++)
 			{
-				if (inputletters[i] != inputletters[i - 1])   // Выводит те буквы , которые уже были введены.
+				if (inputletters[i] != inputletters[i - 1])   // ??????? ?? ????? , ??????? ??? ???? ???????.
 				{
 					printf(" %c", inputletters[i]);
 				}
@@ -343,29 +412,21 @@ int main()
 			inputletters[counter] = inputChar;
 			if (inputletters[counter] != inputletters[counter - 1])
 			{
-				counter++;    // счетчик для введенных буквы
+				counter++;    // ??????? ??? ????????? ?????
 			}
 
 
-			errors = 0;
-			for (int i = 0; i < strlen(slovo); i++)
-			{
-				if (inputChar != slovo[i])
-				{
-					errors++;
-				}
-			}
 		} while ((step < numberStep - 1) && (pravilno < strlen(slovo)));
 		if (pravilno == strlen(slovo))
 		{
-			printf("\n\t?????????? ?? ???????? ?????\n");
+			printf("\n\tYou won!\n");
 		}
 		else
 		{
-			printf("\n?? ?? ???????? ?????\n");
+			printf("\nYou lose\n");
 		}
-		printf("??????? 1, ???? ?????? ?????????\n");
-		inputChar = _getch();
+		printf("input 1");
+			inputChar = _getch();
 	} while (inputChar != '1');
 	return 0;
 }
