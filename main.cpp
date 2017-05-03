@@ -228,7 +228,7 @@ struct slova{
 
 int randomGenerator(int digit) // Returns a random number
 {
-	digit = 0 + rand() % (SIZE + 1);
+	digit = 0 + rand() % (SIZE);
 	return digit;
 }
 
@@ -289,6 +289,17 @@ int Tips(char inputChar, int quantityPodzOnLetters, int podzkazki, int flag) // 
 	}
 	return flag;
 
+}
+
+void printInputLetters(char inputletters[])
+{
+	for (int i = 0; i < 20; i++) // You can enter a total of 20 letters
+	{
+		if (inputletters[i] != inputletters[i - 1])   // Display the entered letters
+		{
+			printf(" %c", inputletters[i]);
+		}
+	}
 }
 
 
@@ -379,41 +390,38 @@ int main()
 			correctLetters(slovo, inputChar, outchar, &pravilno);
 
 			printLetters(slovo, outchar);
+
+
 			flag = Tips(inputChar, quantityPodzOnLetters, podzkazki, flag);
-			if (flag == 1)
+			if (flag == 1)      
 			{
 				printf("\n\t");
-				cout << podz << endl;
+				cout << podz << endl;    
 				quantityPodzOnLetters--;
 				podzkazki--;
 			}
 			if (quantityPodzOnLetters == 0 && podzkazki > 0)
 			{
-				printf("\n\tBolshe nety podzkazok dla etogo slova");
-			}
-			if (quantityPodzOnLetters == 0 && podzkazki > 0)
-			{
 				printf("\n\t K etomy slovy bolshe net podzkazok");
 			}
+
+
 			printf("\n\t Y vas ostalos %d podzkazki", podzkazki);
 			printf("\n\t Chto bi podsmotret naberite <?>");
 			printf("\n\t");
 			printf("Vvedenii bykvi:");
-			for (int i = 0; i < 20; i++)
-			{
-				if (inputletters[i] != inputletters[i - 1])   // ??????? ?? ????? , ??????? ??? ???? ???????.
-				{
-					printf(" %c", inputletters[i]);
-				}
-			}
 
-			inputChar = _getch();
 
 			inputletters[counter] = inputChar;
 			if (inputletters[counter] != inputletters[counter - 1])
 			{
-				counter++;    // ??????? ??? ????????? ?????
+				counter++;    // Check for similar symbols
 			}
+			printf("\n\t");
+			printInputLetters(inputletters);// Display the entered letters
+
+
+			inputChar = _getch();
 
 
 		} while ((step < numberStep - 1) && (pravilno < strlen(slovo)));
