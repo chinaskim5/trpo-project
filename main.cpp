@@ -7,7 +7,11 @@
 #include <ctype.h>
 #include <iostream>
 #include <cstdio>
+#include <fstream>
+#include <string>
 #define SIZE 10
+
+using namespace std;
 
 void ris(int step)
 {
@@ -219,8 +223,10 @@ void ris(int step)
 
 struct slova{
 	char key[9][20];
-	char podz[50][50];
+	string podz;
 };
+
+
 
 int main()
 {
@@ -252,15 +258,10 @@ int main()
 		return -1;
 	}
 
-	FILE *TIPS = fopen("tips.txt", "r");
-
-
-	if (TIPS)
-		for (int i = 0; i < SIZE; i++){
-			fscanf(TIPS, "%s", letters[i].podz);
-		}
-	
-
+	ifstream myfile("tips.txt");
+	for (int i = 0; i < SIZE; i++){
+		getline(myfile, letters[i].podz);
+	}
 
 	
 	char inputChar = 0;
