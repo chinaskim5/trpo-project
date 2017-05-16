@@ -33,6 +33,8 @@ int main()
 
 	const int maxLetters = 20;
 	const int numberStep = 10;
+	int record = 0;
+	int lastrecord = 0;
 
 
 	//char letters[] = "???";
@@ -41,9 +43,9 @@ int main()
 	FILE *WORDS = fopen("words.txt", "r");//opening file with the words
 
 	if (WORDS)
-	for (int i = 0; i < SIZE; i++) {
-		fscanf(WORDS, "%s", letters[i].key);
-	}
+		for (int i = 0; i < SIZE; i++) {
+			fscanf(WORDS, "%s", letters[i].key);
+		}
 	else {
 		printf("Error: file doesn't exists!\n");
 		return -1;
@@ -89,6 +91,7 @@ int main()
 		int number = 0;
 		int counter = 0;
 		int quantityPodzOnLetters = 1;
+		
 
 		do
 		{
@@ -108,10 +111,10 @@ int main()
 
 
 			flag = Tips(inputChar, quantityPodzOnLetters, podzkazki, flag);
-			if (flag == 1)      
+			if (flag == 1)
 			{
 				printf("\n\t");
-				cout << podz << endl;    
+				cout << podz << endl;
 				quantityPodzOnLetters--;
 				podzkazki--;
 			}
@@ -143,13 +146,33 @@ int main()
 		if (pravilno == strlen(slovo))
 		{
 			printf("\n\tYou won!\n");
+			record++;
 		}
 		else
 		{
-			printf("\nYou lose\n");
+			printf("\nYou lose new record = %d last best record = %d\n", record, lastrecord);
+			record = 0;
 		}
+
+		FILE *RECORDS = fopen("record.txt", "r+");//opening file with the words
+
+		if (!RECORDS){
+			printf("Error: file doesn't exists!\n");
+			return -1;
+		}
+		else{
+			fscanf(RECORDS, "%d", &lastrecord);
+
+			if (record >= lastrecord){
+				freopen("record.txt", "w", RECORDS);
+				fprintf(RECORDS, "%d letters is Yours best record ", record);
+				fclose(RECORDS);
+
+			}
+		}
+		
 		printf("input 1");
-			inputChar = _getch();
+		inputChar = _getch();
 	} while (inputChar != '1');
 	return 0;
 }
