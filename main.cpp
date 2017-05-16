@@ -143,6 +143,24 @@ int main()
 
 
 		} while ((step < numberStep - 1) && (pravilno < strlen(slovo)));
+		FILE *RECORDS = fopen("record.txt", "r+");//opening file with the words
+
+		if (!RECORDS){
+			printf("Error: file doesn't exists!\n");
+			return -1;
+		}
+		else{
+			fscanf(RECORDS, "%d", &lastrecord);
+
+			if (record > lastrecord){
+				freopen("record.txt", "w", RECORDS);
+				fprintf(RECORDS, "%d letters is Yours best record ", record);
+				fclose(RECORDS);
+
+			}
+		}
+		
+		
 		if (pravilno == strlen(slovo))
 		{
 			printf("\n\tYou won!\n");
@@ -154,25 +172,10 @@ int main()
 			record = 0;
 		}
 
-		FILE *RECORDS = fopen("record.txt", "r+");//opening file with the words
-
-		if (!RECORDS){
-			printf("Error: file doesn't exists!\n");
-			return -1;
-		}
-		else{
-			fscanf(RECORDS, "%d", &lastrecord);
-
-			if (record >= lastrecord){
-				freopen("record.txt", "w", RECORDS);
-				fprintf(RECORDS, "%d letters is Yours best record ", record);
-				fclose(RECORDS);
-
-			}
-		}
 		
 		printf("input 1");
 		inputChar = _getch();
 	} while (inputChar != '1');
+	printf("\nYour new record: %d \nYour last best record: %d\n", record, lastrecord);
 	return 0;
 }
