@@ -1,4 +1,4 @@
 language: C++
-compiler: g++
+compiler: mingw
 script: make
  
