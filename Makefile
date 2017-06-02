@@ -1,5 +1,5 @@
 comp := g++
-flags := -Wall -Werror
+flags := -Wall
 src/.o := build
 
 
