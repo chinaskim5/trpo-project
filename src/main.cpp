@@ -76,7 +76,7 @@ int main()
 		int sizeLetters = strlen(slovo); // How many letters in a word
 		char outchar[maxLetters];  // The data to be displayed on the screen
 		char inputletters[maxLetters]; // For input characters
-		memset(inputletters, NULL, maxLetters); // Clean the array
+		memset(inputletters, 0, maxLetters); // Clean the array
 
 		for (int i = 0; i < sizeLetters; i++) // We put all the letters not guessing
 		{
@@ -85,10 +85,10 @@ int main()
 
 
 		//Game settings
-		int pravilno = 0;
-		int step = 0;
-		int errors = 1;
-		int number = 0;
+		unsigned int pravilno = 0;
+		unsigned int step = 0;
+		unsigned int errors = 1;
+		//int number = 0;
 		int counter = 0;
 		int quantityPodzOnLetters = 1;
 		
