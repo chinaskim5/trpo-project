@@ -1,4 +1,5 @@
 language: C++
-compiler: mingw
+compiler: g++
 script: make
+os: windows
  
