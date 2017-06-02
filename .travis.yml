@@ -1,5 +1,6 @@
-language: C++
+os: windows
+language: c++
 compiler: g++
 script: make
-os: windows
+
  
