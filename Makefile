@@ -25,4 +25,4 @@ $(src/.o)/tips_and_checking.o:src/tips_and_checking.cpp
 		$(comp) $(flags) -c src/tips_and_checking.cpp -o $(src/.o)/tips_and_checking.o
 		
 clean:
-		rm -rf build/*.o bin/*
+		rm -rf build/*.o bin/*.exe
