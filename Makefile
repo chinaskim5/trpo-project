@@ -1,6 +1,6 @@
 comp := g++
 flags := -Wall -Werror
-src/.o := build/src/
+src/.o := build
 
 
 .PHONY:all clean
@@ -25,4 +25,4 @@ $(src/.o)/tips_and_checking.o:src/tips_and_checking.cpp
 		$(comp) $(flags) -c src/tips_and_checking.cpp -o $(src/.o)/tips_and_checking.o
 		
 clean:
-		rm -rf build/test/*.o build/src/*.o bin/*
+		rm -rf build/*.o bin/*
