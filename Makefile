@@ -32,7 +32,7 @@ build/test/func_test.o: test/func_test.c
 		gcc -I thirdparty -I src -c test/func_test.c -o build/test/func_test.o
 build/src/allfunc.o: test/allfunc.c
 		gcc -I thirdparty -I src -std=c99 -c test/allfunc.c -o build/src/allfunc.o
-build/test/main_test.o: test/main_test
-		gcc -I thirdparty -I src -c test/main_test -o build/test/main_test.o
+build/test/main_test.o: test/main_test.c
+		gcc -I thirdparty -I src -c test/main_test.c -o build/test/main_test.o
 clean:
 		rm -rf build/*.o bin/*.exe
