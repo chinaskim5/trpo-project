@@ -15,11 +15,11 @@ int randomGenerator(int digit);
 void ris(int step);
 int randomGenerator(int digit);
 int Tips(char inputChar, int quantityPodzOnLetters, int podzkazki, int flag);
-int correctLetters(char *slovo, char inputChar, char outchar[], int *pravilno);
+int correctLetters(char *slovo, char inputChar, char outchar[], unsigned int *pravilno);
 void printLetters(char *slovo, char outchar[]);
 void printInputLetters(char inputletters[]);
 int errorsInLetters(char *slovo, char inputChar);
-int checkErros(int errors, char *slovo, int step);
+int checkErros(unsigned int errors, char *slovo, int step);
 
 
 

@@ -12,7 +12,7 @@ int Tips(char inputChar, int quantityPodzOnLetters, int podzkazki, int flag) // 
 
 
 
-int checkErros(int errors, char *slovo, int step)  // Check how many mismatches
+int checkErros(unsigned int errors, char *slovo, int step)  // Check how many mismatches
 {
 	if (errors == strlen(slovo))
 	{
